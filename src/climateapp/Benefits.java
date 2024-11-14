@@ -6,7 +6,7 @@ package climateapp;
 
 /**
  *
- * @author lenovo
+ * @author Linru Wang
  */
 public class Benefits extends Climate {
 
