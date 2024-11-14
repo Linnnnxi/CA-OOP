@@ -50,8 +50,10 @@ public class ClimateGUI extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 0, 0));
 
         titleLbl.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 18)); // NOI18N
+        titleLbl.setForeground(new java.awt.Color(255, 0, 0));
         titleLbl.setText("Climate Application");
 
         nameLbl.setText("Name:");
@@ -68,7 +70,7 @@ public class ClimateGUI extends javax.swing.JFrame {
 
         subBtn.setBackground(new java.awt.Color(204, 204, 204));
         subBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        subBtn.setForeground(new java.awt.Color(102, 0, 51));
+        subBtn.setForeground(new java.awt.Color(255, 0, 0));
         subBtn.setText("Submit Button");
         subBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
