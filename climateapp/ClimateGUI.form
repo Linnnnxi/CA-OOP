@@ -47,10 +47,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="nameLbl" min="-2" pref="73" max="-2" attributes="0"/>
-                          <Component id="PNLbl" min="-2" pref="94" max="-2" attributes="0"/>
-                          <Component id="LevelLbl" min="-2" pref="131" max="-2" attributes="0"/>
+                          <Component id="LevelLbl" max="32767" attributes="0"/>
+                          <Component id="PNLbl" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -64,7 +64,7 @@
                       <Component id="titleLbl" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="57" max="32767" attributes="0"/>
+              <EmptySpace pref="42" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -95,7 +95,7 @@
               </Group>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="subBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <EmptySpace pref="19" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -107,23 +107,32 @@
           <Font name="Microsoft YaHei UI" size="18" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="33" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Climate Application"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="nameLbl">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Microsoft YaHei UI" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Name:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="PNLbl">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Microsoft YaHei UI" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Phone Number:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="LevelLbl">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Microsoft YaHei UI" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Activity Level (1-10):"/>
       </Properties>
     </Component>
@@ -139,13 +148,13 @@
     <Component class="javax.swing.JButton" name="subBtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+          <Color blue="99" green="99" red="ff" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="14" style="1"/>
+          <Font name="Yu Gothic" size="14" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="33" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Submit Button"/>
       </Properties>

@@ -17,6 +17,8 @@ public class ClimateGUI extends javax.swing.JFrame {
      */
     public ClimateGUI() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(153,0,0)); // Light blue color
+
     }
 
     /**
@@ -53,13 +55,16 @@ public class ClimateGUI extends javax.swing.JFrame {
         setBackground(new java.awt.Color(153, 0, 0));
 
         titleLbl.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 18)); // NOI18N
-        titleLbl.setForeground(new java.awt.Color(255, 0, 0));
+        titleLbl.setForeground(new java.awt.Color(255, 255, 51));
         titleLbl.setText("Climate Application");
 
+        nameLbl.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
         nameLbl.setText("Name:");
 
+        PNLbl.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
         PNLbl.setText("Phone Number:");
 
+        LevelLbl.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
         LevelLbl.setText("Activity Level (1-10):");
 
         nameTF.addActionListener(new java.awt.event.ActionListener() {
@@ -68,9 +73,9 @@ public class ClimateGUI extends javax.swing.JFrame {
             }
         });
 
-        subBtn.setBackground(new java.awt.Color(204, 204, 204));
-        subBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        subBtn.setForeground(new java.awt.Color(255, 0, 0));
+        subBtn.setBackground(new java.awt.Color(255, 153, 153));
+        subBtn.setFont(new java.awt.Font("Yu Gothic", 1, 14)); // NOI18N
+        subBtn.setForeground(new java.awt.Color(255, 255, 51));
         subBtn.setText("Submit Button");
         subBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,10 +91,10 @@ public class ClimateGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(nameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PNLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LevelLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LevelLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(PNLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(nameTF, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
@@ -98,7 +103,7 @@ public class ClimateGUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(141, 141, 141)
                         .addComponent(titleLbl)))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(subBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,7 +128,7 @@ public class ClimateGUI extends javax.swing.JFrame {
                     .addComponent(LevelTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(subBtn)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
