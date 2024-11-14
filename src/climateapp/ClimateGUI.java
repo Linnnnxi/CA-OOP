@@ -132,31 +132,46 @@ public class ClimateGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_nameTFActionPerformed
 
     private void subBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subBtnActionPerformed
-        // TODO add your handling code here:
+
         // Get user input
         String name = nameTF.getText();
         String PN = PNTF.getText();
         String level = LevelTF.getText();
 
+        // Validate the activity level input
+        int activityLevel;
+        try {
+            activityLevel = Integer.parseInt(level);
+
+            // Check if the activity level is within a valid range (1-10)
+            if (activityLevel < 1 || activityLevel > 10) {
+                JOptionPane.showMessageDialog(this, "Please enter a valid activity level between 1 and 10.");
+                return;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Invalid input! Please enter a numeric value for activity level.");
+            return;
+        }
+
         // Display user input
-        JOptionPane.showMessageDialog(this,"Name: "+name+"\nPhone Number: "+PN+"\nActivity Level: "+level);
+        JOptionPane.showMessageDialog(this, "Name: " + name + "\nPhone Number: " + PN + "\nActivity Level: " + activityLevel);
 
         // Create instances of CarbonTracker and Benefits
         CarbonTracker carbonTracker = new CarbonTracker("Tracking your carbon emissions:");
         Benefits benefits = new Benefits("Reducing carbon footprint benefits:");
 
-        // Calculate emissions (example activity level of 5)
-        double totalEmissions = carbonTracker.calculateEmissions(5);
+        // Calculate emissions using the user's input for activity level
+        double totalEmissions = carbonTracker.calculateEmissions(activityLevel);
         String emissionsMessage = carbonTracker.getCarbonTrackerMessage() + "\nYour estimated emissions: " + totalEmissions + " kg CO2";
 
         String benefitsMessage = "Reducing carbon footprint benefits: "
-                            + benefits.getBenefits() + "\n\n"
-                            + "Here are some tips to reduce your impact!"
-                            + benefits.getPersonalizedTips();
+                                + benefits.getBenefits() + "\n\n"
+                                + "Here are some tips to reduce your impact!"
+                                + benefits.getPersonalizedTips();
 
         // Display the results
-        JOptionPane.showMessageDialog(this,emissionsMessage);
-        JOptionPane.showMessageDialog(this,benefitsMessage);
+        JOptionPane.showMessageDialog(this, emissionsMessage);
+        JOptionPane.showMessageDialog(this, benefitsMessage);
     }//GEN-LAST:event_subBtnActionPerformed
 
     /**
